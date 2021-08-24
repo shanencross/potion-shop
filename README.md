@@ -22,6 +22,10 @@ The shop should fulfill the following user stories:
 ## Set up / Installation requirements
 /* TODO */
 
+# Component Diagram
+
+![Component Diagram](diagrams/potions-shop.drawio.png))
+
 ## Known Bugs
 * No known bugs
 
