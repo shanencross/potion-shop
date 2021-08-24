@@ -1,4 +1,4 @@
-# Potion shop
+# Potion Shop
 #### Learning project for Epicodus - Website made with React
 #### By Shanen Cross
 
