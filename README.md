@@ -24,7 +24,7 @@ The shop should fulfill the following user stories:
 
 # Component Diagram
 
-![Component Diagram](diagrams/potions-shop.drawio.png))
+![Component Diagram](diagrams/potion-shop.drawio.png)
 
 ## Known Bugs
 * No known bugs
