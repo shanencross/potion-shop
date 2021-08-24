@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function Cauldron(props) {
   return (
@@ -13,5 +14,13 @@ function Cauldron(props) {
     </React.Fragment>
   );
 }
+
+Cauldron.propTypes = {
+  name: PropTypes.string,
+  brand: PropTypes.string,
+  price: PropTypes.number,
+  id: PropTypes.string
+}
+
 
 export default Cauldron;
