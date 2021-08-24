@@ -11,6 +11,7 @@ function Menu(props) {
       <Cauldron name="Purple Potion" brand="The Scarlet Witch" price={24.99} />
       <Cauldron />
       <Cauldron />
+      <button>Add New Cauldron</button>
     </React.Fragment>
   );
 }
