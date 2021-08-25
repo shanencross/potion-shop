@@ -39,6 +39,7 @@ function NewCauldronForm(props) {
         <input 
           type="number"
           step="0.01"
+          min="0"
           name="price" 
           placeholder="Price per pint"
           required/>
@@ -52,6 +53,7 @@ function NewCauldronForm(props) {
         <input 
           type="number" 
           step="0.001"
+          min="0"
           max="1"
           name="magicConcentration" 
           placeholder="Magic concentration"

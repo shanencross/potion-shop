@@ -10,6 +10,7 @@ function Menu(props) {
                                         name={cauldron.name}
                                         brand={cauldron.brand}
                                         price={cauldron.price}
+                                        pints={cauldron.pints}
                                         id={cauldron.id}
                                         whenCauldronClicked={onCauldronSelection}
                                         key={cauldron.id}/>)}

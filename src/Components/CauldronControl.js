@@ -44,8 +44,21 @@ class CauldronControl extends React.Component {
     });
   }
 
-  handleBuy = (id) => {
-    console.log("Buying " + id);
+  handleBuy = (cauldronToBuy) => {
+    const newPintValue = cauldronToBuy.pints - 1;
+    if (newPintValue < 0) {
+      return;
+    }
+
+    const newCauldronToBuy = { ...cauldronToBuy, pints: newPintValue };
+
+    const newCauldronList = this.state.cauldronList.map(cauldron => 
+      cauldron.id === cauldronToBuy.id ? newCauldronToBuy : cauldron); 
+
+    this.setState({
+      cauldronList: newCauldronList,
+      selectedCauldron: newCauldronToBuy
+    });
   }
 
   render() {
