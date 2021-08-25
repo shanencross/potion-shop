@@ -29,10 +29,15 @@ class CauldronControl extends React.Component {
     });
   }
 
-  handleAddingNewCauldron = () => {
+  handleAddClick = () => {
     this.setState({
       newCauldronFormVisible: true
     });
+  }
+
+  handleAddingNewCauldron = (cauldron) => {
+    console.log("Adding new cauldron");
+    console.log(cauldron);
   }
 
   render() {
@@ -44,7 +49,7 @@ class CauldronControl extends React.Component {
 
     let currentlyVisibleState = null;
     if (newCauldronFormVisible) {
-      currentlyVisibleState = <NewCauldronForm/>
+      currentlyVisibleState = <NewCauldronForm onNewCauldronCreation={this.handleAddingNewCauldron}/>
     }
     else if (selectedCauldron != null) {
       currentlyVisibleState = <CauldronDetails cauldron={selectedCauldron}/>
@@ -53,7 +58,7 @@ class CauldronControl extends React.Component {
       currentlyVisibleState = <Menu 
                                 menu={cauldronList} 
                                 onCauldronSelection={this.handleChangingSelectedCauldron}
-                                onClickingAdd={this.handleAddingNewCauldron}/>
+                                onClickingAdd={this.handleAddClick}/>
     }
     return (
       <React.Fragment>
