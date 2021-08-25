@@ -7,16 +7,28 @@ import NewCauldronForm from "./NewCauldronForm";
 class CauldronControl extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      cauldronList: cauldrons,
+      newCauldronFormVisible: false,
+      selectedCauldron: null
+    }
   }
 
   render() {
+    const { cauldronList, newCauldronFormVisible, selectedCauldron } = this.state;
+    let currentlyVisibleState = null;
+    if (newCauldronFormVisible) {
+      currentlyVisibleState = <NewCauldronForm/>
+    }
+    else if (selectedCauldron != null) {
+      currentlyVisibleState = <CauldronDetails cauldron={selectedCauldron}/>
+    }
+    else {
+      currentlyVisibleState = <Menu menu={this.state.cauldronList}/>
+    }
     return (
       <React.Fragment>
-        <Menu menu={cauldrons}/>
-        <hr/>
-        <CauldronDetails cauldron={cauldrons[3]}/>
-        <hr/>
-        <NewCauldronForm/>
+        {currentlyVisibleState}
       </React.Fragment>
     );
   }
