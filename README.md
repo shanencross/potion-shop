@@ -35,5 +35,5 @@ To install and run:
 * No known bugs
 
 ## License
-* [MIT](https://choosealicense.com/licenses/mit)
+* [MIT](LICENSE)
 * Copyright 2021 Shanen Cross
