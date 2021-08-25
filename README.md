@@ -23,7 +23,7 @@ The shop fulfills the following user stories:
 To install and run:
 * Install git
 * Install [npm](https://www.npmjs.com/), the JavaScript package manager. For development, I used npm version 6.14.10
-* Use _git clone_ this repository to a local directory
+* Use _git clone_ to clone this repository to a local directory
 * Use _npm install_ on the command line to install the necessary modules
 * Use _npm start_ on the command line to build the project and run a local server. The website will automatically open in your web browser. By default, the URL should be _http://localhost:3000/_
 
