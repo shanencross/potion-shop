@@ -14,8 +14,12 @@ class CauldronControl extends React.Component {
     }
   }
 
-  handleChangingSelectedCauldron(id) {
-    console.log(id);
+  handleChangingSelectedCauldron = (id) => {
+    const newSelectedCauldron = this.state.cauldronList.filter(cauldron => cauldron.id === id)[0];
+    this.setState({
+      newCauldronFormVisible: false,
+      selectedCauldron: newSelectedCauldron 
+    });
   }
 
   render() {
