@@ -6,7 +6,7 @@ function Cauldron(props) {
   return (
     <React.Fragment>
       <div onClick={() => whenCauldronClicked(id)}>
-        <h3>{name} - <em>${price}</em></h3>
+        <h3>{name} - <em>${price.toFixed(2)}</em></h3>
         <p>
           Brewed for you by:
           <br/>

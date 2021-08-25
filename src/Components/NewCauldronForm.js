@@ -8,11 +8,11 @@ function NewCauldronForm(props) {
 
     const { name, brand, price, description, magicConcentration } = event.target;
     props.onNewCauldronCreation({
-      name: name,
-      brand: brand,
-      price: price,
-      description: description,
-      magicConcentration: magicConcentration,
+      name: name.value,
+      brand: brand.value,
+      price: parseFloat(price.value),
+      description: description.value,
+      magicConcentration: parseFloat(magicConcentration.value),
       pints: 124,
       id: v4()
     });
@@ -27,30 +27,35 @@ function NewCauldronForm(props) {
         <input 
           type="text" 
           name="name" 
-          placeholder="Potion Name"/>
+          placeholder="Potion Name"
+          required/>
         <br/>
         <input 
           type="text" 
           name="brand" 
-          placeholder="Brand of potion brewer"/>
+          placeholder="Brand of potion brewer"
+          required/>
         <br/>
         <input 
           type="number"
           step="0.01"
           name="price" 
-          placeholder="Price per pint"/>
+          placeholder="Price per pint"
+          required/>
         <br/>
         <input 
           type="text" 
           name="description" 
-          placeholder="Potion effect description"/>
+          placeholder="Potion effect description"
+          required/>
         <br/>
         <input 
           type="number" 
           step="0.001"
           max="1"
           name="magicConcentration" 
-          placeholder="Magic concentration"/>
+          placeholder="Magic concentration"
+          required/>
         <br/>
         <button type="submit">Submit new cauldron</button>
       </form>

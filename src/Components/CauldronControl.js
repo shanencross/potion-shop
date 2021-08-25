@@ -35,9 +35,13 @@ class CauldronControl extends React.Component {
     });
   }
 
-  handleAddingNewCauldron = (cauldron) => {
-    console.log("Adding new cauldron");
-    console.log(cauldron);
+  handleAddingNewCauldron = (newCauldron) => {
+    const newCauldronList = [ ...this.state.cauldronList, newCauldron ];
+    console.log(newCauldronList);
+    this.setState({
+      newCauldronFormVisible: false,
+      cauldronList: newCauldronList
+    });
   }
 
   render() {

@@ -7,7 +7,7 @@ function CauldronDetails(props) {
   return (
     <React.Fragment>
       <h1>{name}</h1>
-      <button><strong>Buy pint</strong> for ${price}</button>
+      <button><strong>Buy pint</strong> for ${price.toFixed(2)}</button>
       <p>
         <strong>Brewed for you by:</strong> <em>{brand}</em>
         <br/>
