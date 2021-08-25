@@ -27,8 +27,8 @@ The shop fulfills the following user stories:
 ### Installing Application
 * Use ```git clone``` to download this repository to a local directory
 * Navigate to this local directory in your terminal, which should be named ```potion-shop``` by default
-* Use ```npm install``` on the command line to install the necessary modules
-* Use ```npm start``` on the command line to build the project and run a local server. The website will automatically open in your web browser. By default, the URL should be _http://localhost:3000/_
+* Enter ```npm install``` on the command line to install the necessary modules
+* Enter ```npm start``` on the command line to build the project and run a local server. The website will automatically open in your web browser. By default, the URL should be _http://localhost:3000/_
 
 # Component Diagram
 
