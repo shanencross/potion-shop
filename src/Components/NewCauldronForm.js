@@ -1,12 +1,29 @@
 import React from "react";
+import PropTypes from "prop-types";
+import { v4 } from "uuid";
 
 function NewCauldronForm(props) {
+  function handleNewCauldronFormSubmission(event) {
+    event.preventDefault();
+
+    const { name, brand, price, description, magicConcentration } = event.target;
+    props.onNewCauldronCreation({
+      name: name,
+      brand: brand,
+      price: price,
+      description: description,
+      magicConcentration: magicConcentration,
+      pints: 124,
+      id: v4()
+    });
+  }
+
   return (
     <React.Fragment>
       {/* name, brand, price, description, magicConcentration, pints=124, id=v4()*/}
       <h1>Order new potion cauldron</h1>
       <p>Fill out the form with the potion details to order a new cauldron for the shop.</p>
-      <form>
+      <form onSubmit={handleNewCauldronFormSubmission}>
         <input 
           type="text" 
           name="name" 
@@ -18,7 +35,8 @@ function NewCauldronForm(props) {
           placeholder="Brand of potion brewer"/>
         <br/>
         <input 
-          type="number" 
+          type="number"
+          step="0.01"
           name="price" 
           placeholder="Price per pint"/>
         <br/>
@@ -29,7 +47,7 @@ function NewCauldronForm(props) {
         <br/>
         <input 
           type="number" 
-          step="0.01"
+          step="0.001"
           max="1"
           name="magicConcentration" 
           placeholder="Magic concentration"/>
@@ -40,5 +58,9 @@ function NewCauldronForm(props) {
     </React.Fragment>
   );
 }
+
+NewCauldronForm.propTypes = {
+  onNewCauldronCreation: PropTypes.func
+};
 
 export default NewCauldronForm;
