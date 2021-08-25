@@ -23,5 +23,4 @@ Cauldron.propTypes = {
   id: PropTypes.string
 }
 
-
 export default Cauldron;
