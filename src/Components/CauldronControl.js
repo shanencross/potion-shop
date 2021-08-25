@@ -44,6 +44,10 @@ class CauldronControl extends React.Component {
     });
   }
 
+  handleBuy = (id) => {
+    console.log("Buying " + id);
+  }
+
   render() {
     const { cauldronList, newCauldronFormVisible, selectedCauldron } = this.state;
     
@@ -56,7 +60,9 @@ class CauldronControl extends React.Component {
       currentlyVisibleState = <NewCauldronForm onNewCauldronCreation={this.handleAddingNewCauldron}/>
     }
     else if (selectedCauldron != null) {
-      currentlyVisibleState = <CauldronDetails cauldron={selectedCauldron}/>
+      currentlyVisibleState = <CauldronDetails 
+                                cauldron={selectedCauldron} 
+                                onClickingBuy={this.handleBuy}/>
     }
     else {
       currentlyVisibleState = <Menu 
