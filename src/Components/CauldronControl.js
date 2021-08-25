@@ -14,6 +14,10 @@ class CauldronControl extends React.Component {
     }
   }
 
+  handleChangingSelectedCauldron(id) {
+    console.log(id);
+  }
+
   render() {
     const { cauldronList, newCauldronFormVisible, selectedCauldron } = this.state;
     let currentlyVisibleState = null;
@@ -24,7 +28,9 @@ class CauldronControl extends React.Component {
       currentlyVisibleState = <CauldronDetails cauldron={selectedCauldron}/>
     }
     else {
-      currentlyVisibleState = <Menu menu={this.state.cauldronList}/>
+      currentlyVisibleState = <Menu 
+                                menu={cauldronList} 
+                                onCauldronSelection={this.handleChangingSelectedCauldron}/>
     }
     return (
       <React.Fragment>
