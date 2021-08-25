@@ -1,8 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function CauldronDetails(props) {
   const { cauldron } = props;
-  const  { name, brand, price, description, magicConcentration, pints } = cauldron;
+  const { name, brand, price, description, magicConcentration, pints } = cauldron;
   return (
     <React.Fragment>
       <h1>{name}</h1>
@@ -19,5 +20,9 @@ function CauldronDetails(props) {
     </React.Fragment>
   );
 }
+
+CauldronDetails.propTypes = {
+  cauldron: PropTypes.object
+};
 
 export default CauldronDetails;
