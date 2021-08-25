@@ -15,7 +15,7 @@ The shop fulfills the following user stories:
 ## Technologies Used
 * HTML
 * CSS
-* Javascript
+* JavaScript
 * React
 
 ## Set up / Installation requirements
