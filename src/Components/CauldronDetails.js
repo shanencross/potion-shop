@@ -17,6 +17,7 @@ function CauldronDetails(props) {
         <br/>
         <strong>Pints left:</strong> {pints}
       </p>
+      <hr/>
     </React.Fragment>
   );
 }

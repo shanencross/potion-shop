@@ -30,7 +30,9 @@ class CauldronControl extends React.Component {
   }
 
   handleAddingNewCauldron = () => {
-    console.log("Go to add new cauldron form");
+    this.setState({
+      newCauldronFormVisible: true
+    });
   }
 
   render() {

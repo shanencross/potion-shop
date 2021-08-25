@@ -36,6 +36,7 @@ function NewCauldronForm(props) {
         <br/>
         <button type="submit">Submit new cauldron</button>
       </form>
+      <hr/>
     </React.Fragment>
   );
 }

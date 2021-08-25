@@ -12,8 +12,9 @@ function Menu(props) {
                                         price={cauldron.price}
                                         id={cauldron.id}
                                         whenCauldronClicked={onCauldronSelection}
-                                        key={cauldron.id}/>)};
+                                        key={cauldron.id}/>)}
       <button onClick={onClickingAdd}>Add New Cauldron</button>
+      <hr/>
     </React.Fragment>
   );
 }
