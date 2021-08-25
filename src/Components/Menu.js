@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Cauldron from "./Cauldron";
 
 function Menu(props) {
-  const { menu, onCauldronSelection} = props;
+  const { menu, onCauldronSelection, onClickingAdd} = props;
   return (
     <React.Fragment>
       {menu.map((cauldron) => <Cauldron 
@@ -13,14 +13,15 @@ function Menu(props) {
                                         id={cauldron.id}
                                         whenCauldronClicked={onCauldronSelection}
                                         key={cauldron.id}/>)};
-      <button>Add New Cauldron</button>
+      <button onClick={onClickingAdd}>Add New Cauldron</button>
     </React.Fragment>
   );
 }
 
 Menu.propTypes = {
   menu: PropTypes.array,
-  onCauldronSelection: PropTypes.func
+  onCauldronSelection: PropTypes.func,
+  onClickingAdd: PropTypes.func
 };
 
 export default Menu;

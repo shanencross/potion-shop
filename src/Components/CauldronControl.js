@@ -22,8 +22,24 @@ class CauldronControl extends React.Component {
     });
   }
 
+  handleReturnToMenu = () => {
+    this.setState({
+      newCauldronFormVisible: false,
+      selectedCauldron: null
+    });
+  }
+
+  handleAddingNewCauldron = () => {
+    console.log("Go to add new cauldron form");
+  }
+
   render() {
     const { cauldronList, newCauldronFormVisible, selectedCauldron } = this.state;
+    
+    const returnToMenuButton = (newCauldronFormVisible || selectedCauldron != null) ?
+      <button onClick={this.handleReturnToMenu}>Return to Potion Menu</button> :
+      null;
+
     let currentlyVisibleState = null;
     if (newCauldronFormVisible) {
       currentlyVisibleState = <NewCauldronForm/>
@@ -34,11 +50,13 @@ class CauldronControl extends React.Component {
     else {
       currentlyVisibleState = <Menu 
                                 menu={cauldronList} 
-                                onCauldronSelection={this.handleChangingSelectedCauldron}/>
+                                onCauldronSelection={this.handleChangingSelectedCauldron}
+                                onClickingAdd={this.handleAddingNewCauldron}/>
     }
     return (
       <React.Fragment>
         {currentlyVisibleState}
+        {returnToMenuButton}
       </React.Fragment>
     );
   }
